@@ -1,4 +1,4 @@
-# conv-tt-lstm-public
+# Conv-TT-LSTM
 
 ## Intro
 For the paper, 'Convolutional Tensor-Train LSTM for Spatio-Temporal Learning', under submission 2020.
@@ -39,6 +39,18 @@ python3 model_train.py \
 --gradient-clipping \ # use gradient clipping in training
 --clipping-threshold 3 \ # threshold value for gradient clipping
 ```
+
+## Add the module for Perceptual Similary 
+1) In the code/ directory, 
+    git clone https://github.com/richzhang/PerceptualSimilarity.git
+2) Add an empty __init__.py file in code/PerceptualSimilarity/
+3) For all files in code/PerceptualSimilarity/models, 
+    remove 'from Ipython import embed' 
+4) For dist\_model.py and networks\_basic.py in code/PerceptualSimilarity/models/, 
+    change 'import models as util' to 'from PerceptualSimilarity import models as util'
+5) In code/PerceptualSimilarity/models/\_\_init\_\_.py, 
+    change 'from models import dist\_model' to 'from PerceptualSimilarity.models import dist\_model'
+
 
 ## Testing the model
 ```shell
