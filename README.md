@@ -77,5 +77,5 @@ python3 model_test.py \
 ```
 
 ## Contacts
-This code was written by [Wonmin Byeon](https://github.com/wonmin-byeon)\(wbyeon@nvidia.com\) and [Jiahao Su]\(jiahaos@nvidia.com\).
+This code was written by [Wonmin Byeon](https://github.com/wonmin-byeon) \(wbyeon@nvidia.com\) and Jiahao Su \(jiahaos@nvidia.com\).
 
