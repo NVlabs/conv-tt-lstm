@@ -1,4 +1,4 @@
-# conv-tt-lstm-public
+# Conv-TT-LSTM
 
 ## Intro
 For the paper, 'Convolutional Tensor-Train LSTM for Spatio-Temporal Learning', under submission 2020.
