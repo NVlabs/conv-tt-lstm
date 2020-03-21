@@ -1,7 +1,7 @@
 # Conv-TT-LSTM
 
 ## Intro
-For the paper, 'Convolutional Tensor-Train LSTM for Spatio-Temporal Learning', under submission 2020.
+For the paper, 'Convolutional Tensor-Train LSTM for Spatio-Temporal Learning', under submission 2020. [[project page](https://sites.google.com/nvidia.com/conv-tt-lstm)]
 
 ## License 
 Copyright (c) 2020 NVIDIA Corporation. All rights reserved. This work is licensed under a NVIDIA Open Source Non-commercial license.
