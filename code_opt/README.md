@@ -73,7 +73,7 @@ pip scikit-image==0.17.2 tensorboardX
 ```
 The correct version of apex is already installed in the downloaded image. The fused kernels are supported.
 
-## Add the module for Perceptual Similary 
+## Add the module for Perceptual Similarity 
 1) In the code/ directory, 
     git clone https://github.com/richzhang/PerceptualSimilarity.git -b 1.0
     

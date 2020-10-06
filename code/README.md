@@ -49,7 +49,7 @@ python3 model_train.py \
 --clipping-threshold 3 \ # threshold value for gradient clipping
 ```
 
-## Add the module for Perceptual Similary
+## Add the module for Perceptual Similarity
 1) In the code/ directory, 
     git clone https://github.com/richzhang/PerceptualSimilarity.git -b 1.0
     
