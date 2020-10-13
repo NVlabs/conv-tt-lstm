@@ -153,7 +153,7 @@ class ConvTTLSTMCell(nn.Module):
         self.cell_states = f * self.cell_states + i * g
         outputs = o * torch.tanh(self.cell_states)
         self.hidden_states[self.hidden_pointer] = outputs
-        self.hidden_pointer = (self.hidden_pointer + 1) % self.order
+        self.hidden_pointer = (self.hidden_pointer + 1) % self.steps
         
         return outputs
 

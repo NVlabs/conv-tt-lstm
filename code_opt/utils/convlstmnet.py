@@ -3,7 +3,7 @@
 
 import torch
 import torch.nn as nn
-from convlstmcell import ConvLSTMCell, ConvTTLSTMCell
+from utils.convlstmcell import ConvLSTMCell, ConvTTLSTMCell
 
 ## Convolutional-LSTM network
 class ConvLSTMNet(nn.Module):
@@ -12,8 +12,6 @@ class ConvLSTMNet(nn.Module):
         input_channels,
         # architecture of the model
         layers_per_block, hidden_channels, skip_stride = None,
-        # scope of convolutional tensor-train layers
-        scope = "all", scope_params = {},
         # parameters of convolutional tensor-train layers
         cell = "convlstm", cell_params = {}, 
         # parameters of convolutional operation
@@ -83,16 +81,14 @@ class ConvLSTMNet(nn.Module):
         ## Module type of convolutional LSTM layers
 
         if cell == "convlstm": # standard convolutional LSTM
-
             Cell = lambda in_channels, out_channels: ConvLSTMCell(
             input_channels = in_channels, hidden_channels = out_channels,
             kernel_size = kernel_size, bias = bias)
 
         elif cell == "convttlstm": # convolutional tensor-train LSTM
-
             Cell = lambda in_channels, out_channels: ConvTTLSTMCell(
                 input_channels = in_channels, hidden_channels = out_channels,
-                order = cell_params["order"], steps = cell_params["steps"], ranks = cell_params["rank"], 
+                order = cell_params["order"], steps = cell_params["steps"], ranks = cell_params["ranks"], 
                 kernel_size = kernel_size, bias = bias)
         else:
             raise NotImplementedError
@@ -126,7 +122,7 @@ class ConvLSTMNet(nn.Module):
 
 
     def forward(self, inputs, input_frames, future_frames, output_frames, 
-        teacher_forcing = False, scheduled_sampling_ratio = 0):
+        teacher_forcing = False, scheduled_sampling_ratio = 0, checkpointing = False):
         """
         Computation of Convolutional LSTM network.
         
@@ -179,13 +175,12 @@ class ConvLSTMNet(nn.Module):
                 mask = teacher_forcing_mask[:, t - input_frames]
                 input_ = inputs[:, t] * mask + outputs[t-1] * (1 - mask)
 
-            first_step = (t == 0)
-
             queue = [] # previous outputs for skip connection
             for b in range(self.num_blocks):
                 for l in range(self.layers_per_block[b]):
                     lid = "b{}l{}".format(b, l) # layer ID
-                    input_ = self.layers[lid](input_, first_step = first_step)
+                    input_ = self.layers[lid](input_, 
+                        first_step = (t == 0), checkpointing = checkpointing)
 
                 queue.append(input_)
                 if b >= self.skip_stride:
