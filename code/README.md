@@ -83,7 +83,7 @@ python3 model_test.py \
 --test-data-file \ # Name of the file for test set
 --checkpoint \ # name for the checkpoint
 --batch-size 8 \ # batch size 
---use-sigmoid \ # if using sigmoid output: true for MNIST, false for other datasets
+--use-sigmoid \ # if using sigmoid output: false for MNIST, true for other datasets
 --img-height 64 \ # the image height of video frame: 64 for MNIST and 120 for KTH
 --img-width 64 \ # the image width of video frame: 64 for MNIST and 120 for KTH
 --kernel-size 5 \ # the kernel size of the convolutional operations 
