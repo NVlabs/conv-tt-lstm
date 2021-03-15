@@ -110,7 +110,7 @@ python3 -m torch.distributed.launch \
 --nproc_per_node=8 model_train.py \ # number of GPUs 
 --dataset KTH \ # MNIST or KTH
 --batch-size 8 \ # batch size 
---use-sigmoid \ # if using sigmoid output: true for MNIST, false for other datasets
+--use-sigmoid \ # if using sigmoid output: false for MNIST, true for other datasets
 --img-height 120 \ # the image height of video frame: 64 for MNIST and 120 for KTH
 --img-width 120 \ # the image width of video frame: 64 for MNIST and 120 for KTH
 --img-channals 3 \ # the image channel for video frame: 1 for MNIST and 3 for KTH
@@ -150,7 +150,7 @@ python3 -m torch.distributed.launch \
 --test-data-file \ # Name of the file for test set
 --checkpoint checkpoint.pt \ # name for the checkpoint
 --batch-size 8 \ # batch size 
---use-sigmoid \ # if using sigmoid output: true for MNIST, false for other datasets
+--use-sigmoid \ # if using sigmoid output: false for MNIST, true for other datasets
 --img-height 120 \ # the image height of video frame: 64 for MNIST and 120 for KTH
 --img-width 120 \ # the image width of video frame: 64 for MNIST and 120 for KTH
 --img-channals 3 \ # the image channel for video frame: 1 for MNIST and 3 for KTH
