@@ -3,7 +3,7 @@
 ## Intro
 PyTorch implementations of the paper, '***Convolutional Tensor-Train LSTM for Spatio-Temporal Learning***', NeurIPS 2020. [[project page](https://sites.google.com/nvidia.com/conv-tt-lstm)]
 
-* This code is for reproducing the results of [the paper (Table 4)(https://arxiv.org/pdf/2002.09131.pdf)]
+* This code is for reproducing the results of the paper (Table 4) [[paper](https://arxiv.org/pdf/2002.09131.pdf)]
 
 ## License 
 Copyright (c) 2020 NVIDIA Corporation. All rights reserved. This work is licensed under a NVIDIA Open Source Non-commercial license.
