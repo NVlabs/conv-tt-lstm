@@ -72,7 +72,7 @@ Check the [paper](https://arxiv.org/pdf/2002.09131.pdf) Appendix B.4 for the det
 - KTH: [convttlstm-kth.pt](https://drive.google.com/file/d/1gVicaRn6gJqIR-r89NxnIzVXAaIRomLc/view?usp=sharing)
 
 2) Use the script 'test.sh' to evaluate the models. 
-    Change the 'PATH' to your data path. 
+    Change 'PATH' to your data path. 
 
 ```shell
 python3 -m torch.distributed.launch --nproc_per_node=[num_gpus] test.py [options]
