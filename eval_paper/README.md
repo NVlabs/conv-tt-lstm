@@ -63,7 +63,7 @@ pip scikit-image==0.17.2 tensorboardX
 
 ## Dataset
 Check the [paper](https://arxiv.org/pdf/2002.09131.pdf) Appendix B.4 for the details of data generation. 
-- MNIST: We used the code [[link](https://github.com/jthsieh/DDPAE-video-prediction/blob/master/data/moving_mnist.py)] to generate the data file (moving-mnist-test.npz). 
+- MNIST: We used [this code](https://github.com/jthsieh/DDPAE-video-prediction/blob/master/data/moving_mnist.py) to generate the data file (moving-mnist-test.npz). 
 - KTH: [[download](https://www.csc.kth.se/cvap/actions/)] 
 
 ## Testing the model
