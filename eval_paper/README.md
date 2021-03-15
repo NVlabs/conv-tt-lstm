@@ -3,7 +3,7 @@
 ## Intro
 PyTorch implementations of the paper, '***Convolutional Tensor-Train LSTM for Spatio-Temporal Learning***', NeurIPS 2020. [[project page](https://sites.google.com/nvidia.com/conv-tt-lstm)]
 
-* This code is for reproducing the results of the paper (Table 4) [[paper](https://arxiv.org/pdf/2002.09131.pdf)]
+* This code is for reproducing the results of [the paper (Table 4)](https://arxiv.org/pdf/2002.09131.pdf)
 
 ## License 
 Copyright (c) 2020 NVIDIA Corporation. All rights reserved. This work is licensed under a NVIDIA Open Source Non-commercial license.
@@ -67,8 +67,8 @@ pip scikit-image==0.17.2 tensorboardX
 
 ## Testing the model
 1) Download and save the weight files in 'models/'
-MNIST: [convttlstm-mnist.pt(https://drive.google.com/file/d/1MnK1ftUJgB0H4QOS-k4CVkwtBUjHtSO-/view?usp=sharing)]
-KTH: [convttlstm-kth.pt(https://drive.google.com/file/d/1gVicaRn6gJqIR-r89NxnIzVXAaIRomLc/view?usp=sharing)]
+MNIST: [convttlstm-mnist.pt](https://drive.google.com/file/d/1MnK1ftUJgB0H4QOS-k4CVkwtBUjHtSO-/view?usp=sharing)
+KTH: [convttlstm-kth.pt](https://drive.google.com/file/d/1gVicaRn6gJqIR-r89NxnIzVXAaIRomLc/view?usp=sharing)
 
 2) Use the script 'test.sh' to evaluate the models. 
     Change the 'PATH' to your data path. 
