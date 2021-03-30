@@ -83,7 +83,7 @@ class KTH_Dataset(Dataset):
         if img_height == self.img_height and img_width == self.img_width:
             clip = data[start_frame : start_frame + self.num_frames]
         else: # resizing the input is needed
-            clip = np.stack([resize(data[t], (self.img_height, self.img_width)) 
+            clip = np.stack([resize(data[start_frame + t], (self.img_height, self.img_width)) 
                 for t in range(self.num_frames)], axis = 0)
 
         data = np.float32(clip)
