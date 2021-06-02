@@ -250,13 +250,13 @@ if __name__ == "__main__":
         help = 'The dataset name. (Options: MNIST, KTH)')
 
     # training set
-    parser.add_argument('--train-data-file', default = 'moving-mnist-train-new1.npz', type = str,
+    parser.add_argument('--train-data-file', default = 'moving-mnist-train.npz', type = str,
         help = 'Name of the folder/file for training set.')
     parser.add_argument('--train-samples', default = 10000, type = int,
         help = 'Number of unique samples in training set.')
 
     # validation set
-    parser.add_argument('--valid-data-file', default = 'moving-mnist-val-new1.npz', type = str, 
+    parser.add_argument('--valid-data-file', default = 'moving-mnist-val.npz', type = str, 
         help = 'Name of the folder/file for validation set.')
     parser.add_argument('--valid-samples', default = 3000, type = int, 
         help = 'Number of unique samples in validation set.')
