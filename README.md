@@ -11,7 +11,10 @@ PyTorch implementations of the paper, '***Convolutional Tensor-Train LSTM for Sp
 Copyright (c) 2020 NVIDIA Corporation. All rights reserved. This work is licensed under a NVIDIA Open Source Non-commercial license.
 
 ## Dataset
-- Moving-MNIST-2
+- Moving-MNIST-2 
+    - Generator [[link](https://github.com/jthsieh/DDPAE-video-prediction/blob/master/data/moving_mnist.py)]
+    - Save the output of generate_moving_mnist(...) in npz format by 'np.savez(moving-mnist-train.npz, data)'.
+    
 - KTH action
 
 ## Evaluation of multi-steps prediction
