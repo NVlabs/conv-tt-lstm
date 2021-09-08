@@ -9,7 +9,7 @@ kiwisolver==1.0.1
 matplotlib==3.0.2
 networkx==2.2
 numpy==1.16.2
-Pillow==5.4.1
+Pillow==8.3.2
 protobuf==3.6.1
 pycurl==7.43.0
 pygobject==3.20.0
